@@ -13,6 +13,9 @@ public class MarkdownParse {
         int currentIndex = 0;
         
         while(currentIndex < markdown.length()) {
+            if(markdown.indexOf("[") == -1){
+                break;
+            }
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
@@ -31,7 +34,9 @@ public class MarkdownParse {
         Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
-	    System.out.println(links);
+        if(links.isEmpty()) {
+            System.out.println("");
+        }else{System.out.println(links);}
 
     }
 }
