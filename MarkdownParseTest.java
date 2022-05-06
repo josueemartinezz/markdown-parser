@@ -23,9 +23,11 @@ public class MarkdownParseTest {
         //assertEquals("hello", pathToFile.toAbsolutePath());
         //C:\Users\Josue Martinez\AppData\Roaming\Code\User\workspaceStorage\88ee0edbf9197bdd8a912b5000d61c35\redhat.java\jdt_ws\markdown-parser_c2433895\test-file.md
 
-        Path fileName = Path.of("C:\Users\Josue Martinez\AppData\Roaming\Code\User\workspaceStorage\88ee0edbf9197bdd8a912b5000d61c35\redhat.java\jdt_ws\markdown-parser_c2433895\test-file.md");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList <String> result = new ArrayList<String>();
+        result.add("https://something.com");
+        result.add("some-thing.html");
         
         assertEquals(result, MarkdownParse.getLinks(content));
     }
