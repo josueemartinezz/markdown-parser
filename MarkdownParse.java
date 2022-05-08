@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 //https://howtodoinjava.com/java/io/java-read-file-to-string-examples/
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -40,11 +37,5 @@ public class MarkdownParse {
         if(links.isEmpty()) {
             System.out.println("");
         }else{System.out.println(links);}
-        //
-
-
-
-        //
     }
 }
->>>>>>> 1ee500c2f93fc941b8cd023f9ed14d60f5f6e07c
