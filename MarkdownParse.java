@@ -39,8 +39,5 @@ public class MarkdownParse {
             System.out.println("");
         }else{System.out.println(links);}
 
-
-
-        //
     }
 }
